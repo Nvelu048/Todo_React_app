@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  margin: 8px;
+}
+
+.container label {
+  flex: 1;
+  margin-right: 8px;
+  text-align: end;
+}
+
+.container select {
+  flex: 1.5;
+}
