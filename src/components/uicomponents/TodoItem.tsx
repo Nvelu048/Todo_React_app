@@ -17,7 +17,7 @@ export default function TodoItem(props: P) {
   return (
     <div className="todoContainer">
       <label className="title">{props.title}</label>
-      <label>{props.description}</label>
+      <label className="description">{props.description}</label>
       <div className="dateContainer">
         <label>
           <span style={{ fontWeight: 'bold' }}>
@@ -30,13 +30,13 @@ export default function TodoItem(props: P) {
       </div>
       <div className="todoDetails">
         <label>
-          <span className="title">Status</span>: {props.status}
+          <span className="title">Status</span> {props.status}
         </label>
         <label>
-          <span className="title">Priority</span>: {props.priority}
+          <span className="title">Priority</span> {props.priority}
         </label>
         <label>
-          <span className="title">Label</span>: {props.label}
+          <span className="title">Label</span> {props.label}
         </label>
       </div>
       <div className="actionContainer">

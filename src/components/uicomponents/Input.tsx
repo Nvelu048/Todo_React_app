@@ -4,6 +4,7 @@ import { InputInterface } from '../util/InputInterface';
 interface P extends InputInterface {
   value?: string;
   required?: boolean;
+  disabled?: boolean;
 }
 export default function Input(props: P) {
   return (
@@ -14,6 +15,7 @@ export default function Input(props: P) {
         <Fragment />
       )}
       <input
+        disabled={props.disabled}
         type={props.type}
         id={props.value}
         value={props.value}

@@ -1,0 +1,15 @@
+.noDataFound {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.noDataChildren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  flex-direction: column;
+  color: #d5d5d5;
+}

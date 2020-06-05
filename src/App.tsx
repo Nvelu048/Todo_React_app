@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import NetworkClient from './lib/NetworkClient';
 import './App.css';
-import { Button } from './components';
+import { Button, NoDataFound } from './components';
 import TodoForm from './screens/TodoForm';
 import { Todo } from './util/Todo';
 import TodoItem from './components/uicomponents/TodoItem';
 import { Labels, Priority, Status, getIndex } from './util';
+import { MdSearch } from 'react-icons/md';
 const customStyles = {
   content: {
     top: '50%',
@@ -27,6 +28,7 @@ function App() {
     setOpen(true);
   }
   function closeModal() {
+    setEditMode(false);
     setOpen(false);
   }
 
@@ -158,18 +160,14 @@ function App() {
   }
   return (
     <div className="App" style={{ display: 'flex', justifyContent: 'center' }}>
-      <div
-        style={{
-          display: 'flex',
-          flex: 1,
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        {todoItems}
-      </div>
+      {todoItems.length === 0 ? (
+        <NoDataFound />
+      ) : (
+        <div className="rootContainer">{todoItems}</div>
+      )}
+
       <Button onClick={onClick} />
-      <Modal isOpen={open} onRequestClose={closeModal} style={customStyles}>
+      <Modal isOpen={open} style={customStyles}>
         <TodoForm
           onSubmit={onSubmit}
           isEditMode={isEditMode}

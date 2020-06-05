@@ -82,6 +82,7 @@ export default function TodoForm(props: P) {
       onSubmit={onSubmit}
     >
       <Input
+        disabled={props.isEditMode}
         type="text"
         id="title"
         label="Title"

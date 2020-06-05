@@ -13,7 +13,9 @@
 }
 
 .todoContainer {
-  width: 80%;
+  box-shadow: 3px 3px 2px #a0a0a0;
+  width: 220px;
+  min-height: 150px;
   padding: 8px;
   margin: 8px;
   background: #e5e5e5;
@@ -25,15 +27,16 @@
 }
 
 .todoDetails {
-  display: flex;
-  justify-content: center;
   flex: 1;
-  flex-wrap: wrap;
-  width: 100%;
+  display: flex;
+  margin-top: 16px;
 }
 
 .todoDetails label {
-  flex: 1;
+}
+
+.description {
+  text-align: start;
 }
 
 .title {
@@ -49,5 +52,5 @@
 }
 
 .dateContainer {
-  flex: 1;
+  margin: 8px;
 }
